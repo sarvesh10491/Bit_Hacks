@@ -1,6 +1,7 @@
 Bit manipulation codes & hacks with C
 
 [TOC]
+
 ##### To check if integer is even or odd
 ```C
 int n;
