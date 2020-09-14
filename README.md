@@ -4,18 +4,20 @@ Bit manipulation codes & hacks with C++
 
 </br>
 
-- [Arithmatic](#Arithmatic)
-  * [To check if integer is even or odd](#To-check-if-integer-is-even-or-odd)
+- [Arithmatic operations](#Arithmatic-operations)
+  * [Check if integer is even or odd](#Check-if-integer-is-even-or-odd)
+
 - [Nth bit operations](#Nth-bit-operations)
   * [Set Nth bit in number](#Set-Nth-bit-in-number)
+  
 - [Bit manipulations](#Bit-manipulations)
   * [Sub-heading](#sub-heading-2)
 
 
 <!-- toc -->
 
-## Arithmatic
-#### To check if integer is even or odd
+## Arithmatic operations
+#### Check if integer is even or odd
 ```C++
 void even_odd(int &num)
 {
