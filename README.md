@@ -1,13 +1,13 @@
 # Bit Hacks
 
-Bit manipulation codes & hacks with C
+Bit manipulation codes & hacks with C++
 
 </br>
 
 - [Arithmatic](#Arithmatic)
   * [To check if integer is even or odd](#To-check-if-integer-is-even-or-odd)
 - [Nth bit operations](#Nth-bit-operations)
-  * [Sub-heading](#sub-heading-1)
+  * [Set Nth bit in number](#Set-Nth-bit-in-number)
 - [Bit manipulations](#Bit-manipulations)
   * [Sub-heading](#sub-heading-2)
 
@@ -16,19 +16,26 @@ Bit manipulation codes & hacks with C
 
 ## Arithmatic
 #### To check if integer is even or odd
-```C
-int n;
-
-if(n & 1)
-	printf("Odd");
-else
-	printf("Even");
+```C++
+void even_odd(int &num)
+{
+    if(num & 1)
+	    cout<<"Odd";
+    else
+        cout<<"Even";
+}
 ```
 
 
 
 ## Nth bit operations
-
+#### Set Nth bit in number
+```C++
+void set_Nth_bit(int &num, int pos)
+{
+    num |= (1 << pos);
+}
+```
 
 
 ## Bit manipulations
