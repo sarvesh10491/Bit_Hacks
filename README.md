@@ -36,14 +36,14 @@ void set_Nth_bit(int &num, int pos)
     num |= (1 << pos);
 }
 ```
-num = 10000
-pos = 2
+num = 10000  
+pos = 2  
 
-1<<2 => 00100
+1<<2 => 00100  
 
-    10000
-OR  00100
-    .....
-    10100
+    10000  
+OR  00100  
+    .....  
+    10100  
 
 ## Bit manipulations
