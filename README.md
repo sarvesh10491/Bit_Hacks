@@ -6,9 +6,9 @@ Bit manipulation codes & hacks with C
 
 - [Arithmatic](#Arithmatic)
   * [To check if integer is even or odd](#To-check-if-integer-is-even-or-odd)
-- [Nth bit operations](#Nth bit operations)
+- [Nth bit operations](#Nth-bit-operations)
   * [Sub-heading](#sub-heading-1)
-- [Bit manipulations](#Bit manipulations)
+- [Bit manipulations](#Bit-manipulations)
   * [Sub-heading](#sub-heading-2)
 
 
