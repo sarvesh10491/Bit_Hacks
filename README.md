@@ -39,7 +39,7 @@ void set_Nth_bit(int &num, int pos)
 num = 10000  
 pos = 2  
 
-1<<2 => 00100  
+1<<pos  =>  1<<2  =>  00100  
 
 10000  
 00100  
