@@ -14,7 +14,8 @@ Bit manipulation codes & hacks with C++
   * [Check Nth bit in number Set or Unset](#Check-Nth-bit-in-number-set-or-unset)
   
 - [Bit manipulations](#Bit-manipulations)
-  * [Sub-heading](#sub-heading-2)
+  * [Rotate left by N bits](#Rotate-left-by-N-bits)
+  * [Rotate right by N bits](#Rotate-right-by-N-bits)
 
 
 <!-- toc -->
@@ -44,7 +45,7 @@ void set_Nth_bit(int &num, int pos)
 num = 10000  
 pos = 2  
 
-(1<<pos) &nbsp; => &nbsp; (1<<2) &nbsp; => &nbsp; 00100  
+(1 << pos) &nbsp; => &nbsp; (1 << 2) &nbsp; => &nbsp; 00100  
 
 &nbsp; &nbsp; &nbsp; 10**0**00  
 OR &nbsp; 00**1**00  
@@ -62,7 +63,7 @@ void clear_Nth_bit(int &num, int pos)
 num = 10100  
 pos = 2  
 
-~(1<<pos) &nbsp; => &nbsp; ~(1<<2) &nbsp; => &nbsp; ~00100 &nbsp; => &nbsp; 11011
+~(1 << pos) &nbsp; => &nbsp; ~(1 << 2) &nbsp; => &nbsp; ~00100 &nbsp; => &nbsp; 11011
 
 10**1**00  
 11**0**11 &nbsp; AND  
@@ -80,7 +81,7 @@ void toggle_Nth_bit(int &num, int pos)
 num = 10100  
 pos = 2  
 
-(1<<pos) &nbsp; => &nbsp; (1<<2) &nbsp; => &nbsp; 00100  
+(1 << pos) &nbsp; => &nbsp; (1 << 2) &nbsp; => &nbsp; 00100  
 
 10**1**00  
 00**1**00 &nbsp; XOR  
@@ -92,13 +93,13 @@ pos = 2
 ```C++
 void set_unset_Nth_bit(int &num, int pos)
 {
-    return num & (1<<pos);
+    return num & (1 << pos);
 }
 ```
 num = 10100  
 pos = 2  
 
-(1<<pos) &nbsp; => &nbsp; (1<<2) &nbsp; => &nbsp; 00100  
+(1 << pos) &nbsp; => &nbsp; (1 << 2) &nbsp; => &nbsp; 00100  
 
 10**1**00  
 00**1**00 &nbsp; AND  
@@ -107,3 +108,43 @@ pos = 2
 
 
 ## Bit manipulations
+#### Rotate left by N bits
+```C++
+#define INT_BITS 8
+
+void rotate_left(int &num, int pos)
+{
+    return (num << pos) | (num >> (INT_BITS - pos));  
+}
+```
+num = 0100 0010  
+pos = 2  
+
+(0100 0010 << 2) &nbsp; => &nbsp; 0000 1000  
+(0100 0010 >> (8-2)) &nbsp; => &nbsp; 0000 0001  
+
+0000 1000  
+0000 0001 &nbsp; OR  
+............  
+0000 1001  
+
+
+#### Rotate left by N bits
+```C++
+#define INT_BITS 8
+
+void rotate_right(int &num, int pos)
+{
+    return (num >> pos) | (num << (INT_BITS - pos));  
+}
+```
+num = 0100 0010  
+pos = 2  
+
+(0100 0010 >> 2) &nbsp; => &nbsp; 0001 0000  
+(0100 0010 << (8-2)) &nbsp; => &nbsp; 1000 0000  
+
+0001 0000  
+1000 0000 &nbsp; OR  
+............  
+1001 1000  
