@@ -131,7 +131,6 @@ INT_BITS = 8
 
 
 #### Rotate left by N bits
-----
 ```C++
 #define INT_BITS 8
 
