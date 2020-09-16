@@ -48,4 +48,22 @@ pos = 2
 ............  
 10100  
 
+
+#### Clear Nth bit in number
+```C++
+void clear_Nth_bit(int &num, int pos)
+{
+    num &= ~(1 << pos);
+}
+```
+num = 10100  
+pos = 2  
+
+~(1<<pos) $~$ => $~$ ~(1<<2) $~$ => $~$ ~00100 $~$ => $~$ 11011
+
+10100  
+11011  
+............  
+10000 
+
 ## Bit manipulations
