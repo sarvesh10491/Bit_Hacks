@@ -45,10 +45,10 @@ pos = 2
 
 (1<<pos) &nbsp; => &nbsp; (1<<2) &nbsp; => &nbsp; 00100  
 
-10**0**00  
-00**1**00 &nbsp; OR  
-............  
-10**1**00  
+&nbsp; &nbsp; &nbsp; 10**0**00  
+&nbsp; OR &nbsp; 00**1**00  
+&nbsp; &nbsp; &nbsp; ............  
+&nbsp; &nbsp; &nbsp; 10**1**00  
 
 
 #### Clear Nth bit in number
