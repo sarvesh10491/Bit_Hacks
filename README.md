@@ -11,6 +11,7 @@ Bit manipulation codes & hacks with C++
   * [Set Nth bit in number](#Set-Nth-bit-in-number)
   * [Clear Nth bit in number](#Clear-Nth-bit-in-number)
   * [Toggle Nth bit in number](#Toggle-Nth-bit-in-number)
+  * [Check Nth bit in number Set or Unset](#Check-Nth-bit-in-number-set-or-unset)
   
 - [Bit manipulations](#Bit-manipulations)
   * [Sub-heading](#sub-heading-2)
@@ -85,6 +86,24 @@ pos = 2
 00**1**00 &nbsp; XOR  
 ............  
 10**0**00  
+
+
+#### Check Nth bit in number Set or Unset
+```C++
+void set_unset_Nth_bit(int &num, int pos)
+{
+    return num & (1<<pos);
+}
+```
+num = 10100  
+pos = 2  
+
+(1<<pos) &nbsp; => &nbsp; (1<<2) &nbsp; => &nbsp; 00100  
+
+10**1**00  
+00**1**00 &nbsp; AND  
+............  
+00**1**00  
 
 
 ## Bit manipulations
