@@ -119,17 +119,19 @@ void rotate_left(int &num, int pos)
 ```
 num = 0100 0010  
 pos = 2  
+INT_BITS = 8  
 
 (0100 0010 << 2) &nbsp; => &nbsp; 0000 1000  
 (0100 0010 >> (8-2)) &nbsp; => &nbsp; 0000 0001  
 
 0000 1000  
 0000 0001 &nbsp; OR  
-............  
+........................  
 0000 1001  
 
 
 #### Rotate left by N bits
+----
 ```C++
 #define INT_BITS 8
 
@@ -140,11 +142,12 @@ void rotate_right(int &num, int pos)
 ```
 num = 0100 0010  
 pos = 2  
+INT_BITS = 8  
 
 (0100 0010 >> 2) &nbsp; => &nbsp; 0001 0000  
 (0100 0010 << (8-2)) &nbsp; => &nbsp; 1000 0000  
 
 0001 0000  
 1000 0000 &nbsp; OR  
-............  
-1001 1000  
+........................  
+1001 0000  
