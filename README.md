@@ -63,10 +63,10 @@ pos = 2
 
 ~(1<<pos) &nbsp; => &nbsp; ~(1<<2) &nbsp; => &nbsp; ~00100 &nbsp; => &nbsp; 11011
 
-10100  
-11011  AND  
+10**1**00  
+11**0**11  AND  
 ............  
-10000 
+10**0**00 
 
 
 #### Toggle Nth bit in number
@@ -81,10 +81,10 @@ pos = 2
 
 (1<<pos) &nbsp; => &nbsp; (1<<2) &nbsp; => &nbsp; 00100  
 
-10100  
-00100  XOR  
+10**1**00  
+00**1**00  XOR  
 ............  
-10000  
+10**0**00  
 
 
 ## Bit manipulations
