@@ -41,7 +41,7 @@ void set_Nth_bit(int &num, int pos)
 num = 10000  
 pos = 2  
 
-1<<pos  =>  1<<2  =>  00100  
+1<<pos &nbsp; => &nbsp; 1<<2 &nbsp; => &nbsp; 00100  
 
 10000  
 00100  
@@ -59,7 +59,7 @@ void clear_Nth_bit(int &num, int pos)
 num = 10100  
 pos = 2  
 
-~(1<<pos) $~$ => $~$ ~(1<<2) $~$ => $~$ ~00100 $~$ => $~$ 11011
+~(1<<pos) &nbsp; => &nbsp; ~(1<<2) &nbsp; => &nbsp; ~00100 &nbsp; => &nbsp; 11011
 
 10100  
 11011  
