@@ -46,7 +46,7 @@ pos = 2
 (1<<pos) &nbsp; => &nbsp; (1<<2) &nbsp; => &nbsp; 00100  
 
 &nbsp; &nbsp; &nbsp; 10**0**00  
-&nbsp; OR &nbsp; 00**1**00  
+OR &nbsp; 00**1**00  
 &nbsp; &nbsp; &nbsp; ............  
 &nbsp; &nbsp; &nbsp; 10**1**00  
 
