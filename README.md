@@ -6,6 +6,7 @@ Bit manipulation codes & hacks with C++
 
 - [Arithmatic operations](#Arithmatic-operations)
   * [Check if integer is even or odd](#Check-if-integer-is-even-or-odd)
+  * [Count Set bits in number](#Count-Set-bits-in-number)
 
 - [Nth bit operations](#Nth-bit-operations)
   * [Set Nth bit in number](#Set-Nth-bit-in-number)
@@ -32,7 +33,37 @@ void even_odd(int &num)
 }
 ```
 
+#### Count Set bits in number
+```C++
+int nibble_set_bits[16] = { 0, 1, 1, 2, 1, 2, 2, 3, 
+                        1, 2, 2, 3, 2, 3, 3, 4 };
 
+void count_set_bits(int &num)
+{
+    int nibble = 0;
+
+    if (num == 0) 
+        return nibble_set_bits[0]; 
+  
+    nibble = num & 0xf; 
+
+    return nibble_set_bits[nibble] + count_set_bits(num >> 4);
+}
+```
+num = 1010 1110  
+
+Call 1:  
+current num = 1010 1110 
+nibble = num & 0xf = (1010 1110) & (1111) = 1110 which is decimal "14"  
+nibble_set_bits[14] = 3  
+
+
+call 2:  
+current num = (previous call num >> 4) = (1010 1110 >> 4) = 0000 1010  
+nibble = num & 0xf = (0000 1010) & (1111) = 1010 which is decimal "10"  
+nibble_set_bits[10] = 2  
+
+All call return sum = 3+2 = 5 which are total set bits in 1010 1110  
 
 ## Nth bit operations
 #### Set Nth bit in number
