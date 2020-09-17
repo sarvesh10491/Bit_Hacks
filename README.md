@@ -53,14 +53,14 @@ void count_set_bits(int &num)
 num = 1010 1110  
 
 Call 1:  
-current num = 1010 1110 
-nibble = num & 0xf = (1010 1110) & (1111) = 1110 which is decimal "14"  
+current call num = 1010 1110  
+nibble = (num & 0xf) = (1010 **1110**) & (1111) = 1110 which is decimal "14"  
 nibble_set_bits[14] = 3  
 
 
 call 2:  
-current num = (previous call num >> 4) = (1010 1110 >> 4) = 0000 1010  
-nibble = num & 0xf = (0000 1010) & (1111) = 1010 which is decimal "10"  
+current call num = (previous call num >> 4) = (1010 1110 >> 4) = 0000 1010  
+nibble = (num & 0xf) = (0000 **1010**) & (1111) = 1010 which is decimal "10"  
 nibble_set_bits[10] = 2  
 
 All call return sum = 3+2 = 5 which are total set bits in 1010 1110  
