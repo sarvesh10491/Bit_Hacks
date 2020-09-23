@@ -7,6 +7,7 @@ Bit manipulation codes & hacks with C++
 - [Arithmatic operations](#Arithmatic-operations)
   * [Check if integer is even or odd](#Check-if-integer-is-even-or-odd)
   * [Count Set bits in number](#Count-Set-bits-in-number)
+  * [Swap two numbers without using extra variable](#Swap-two-numbers-without-using-extra-variable)
 
 - [Nth bit operations](#Nth-bit-operations)
   * [Set Nth bit in number](#Set-Nth-bit-in-number)
@@ -60,7 +61,7 @@ nibble = (num & 0xf) = (1010 **1110**) & (1111) = 1110 which is decimal "14"
 nibble_set_bits[14] = 3  
 
 
-call 2:  
+Call 2:  
 current call num = (previous call num >> 4) = (1010 1110 >> 4) = 0000 1010  
 nibble = (num & 0xf) = (0000 **1010**) & (1111) = 1010 which is decimal "10"  
 nibble_set_bits[10] = 2  
@@ -68,6 +69,26 @@ nibble_set_bits[10] = 2
 All call return sum = 3+2 = 5 which are total set bits in 1010 1110  
 
 
+#### Swap two numbers without using extra variable
+```C++
+void swap_numbers(int &x, int &y)
+{
+    if(x != y){
+        x = x ^ y;
+        y = x ^ y;
+        x = x ^ y;
+    }
+}
+```
+x = 3 = 0011  
+y = 4 = 0100  
+
+x = x ^ y = 0011 ^ 0100 = 0111  
+y = x ^ y = 0111 ^ 0100 = 0011  
+x = x ^ y = 0111 ^ 0011 = 0100  
+
+x = 0100 = 4  
+y = 0011 = 3  
 
 
 
