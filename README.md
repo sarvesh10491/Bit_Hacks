@@ -8,6 +8,7 @@ Bit manipulation codes & hacks with C++
   * [Check if integer is even or odd](#Check-if-integer-is-even-or-odd)
   * [Count Set bits in number](#Count-Set-bits-in-number)
   * [Swap two numbers without using extra variable](#Swap-two-numbers-without-using-extra-variable)
+  * [Check if numbeer is power of 2](#Check-if-number-is-power-of-2)
 
 - [Nth bit operations](#Nth-bit-operations)
   * [Set Nth bit in number](#Set-Nth-bit-in-number)
@@ -91,6 +92,30 @@ x = 0100 = 4
 y = 0011 = 3  
 
 
+
+#### Check if numbeer is power of 2
+```C++
+void check_power_of_2(int &num)
+{
+    return (num && !(num & (num - 1)));
+}
+```
+If num==0, first condition fails & we return **False**  
+
+
+num = 0100  
+
+(num - 1) &nbsp; => &nbsp; (0100 - 0001) &nbsp; => &nbsp; 0011  
+num & (num - 1) &nbsp; => &nbsp; (0100 & 0011) &nbsp; => &nbsp; 0000  
+(num && !(num & (num - 1))) &nbsp; => &nbsp; **True** &nbsp; => Is power of 2  
+
+
+
+num = 0110  
+
+(num - 1) &nbsp; => &nbsp; (0110 - 0001) &nbsp; => &nbsp; 0101  
+num & (num - 1) &nbsp; => &nbsp; (0110 & 0101) &nbsp; => &nbsp; 0100  
+(num && !(num & (num - 1))) &nbsp; => &nbsp; **False** &nbsp; => Is not power of 2  
 
 
 ## Nth bit operations
