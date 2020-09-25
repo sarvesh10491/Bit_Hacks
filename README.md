@@ -38,6 +38,8 @@ void even_odd(int &num)
 }
 ```
 
+</br>
+
 #### Count Set bits in number
 ```C++
 int nibble_set_bits[16] = { 0, 1, 1, 2, 1, 2, 2, 3, 
@@ -70,6 +72,7 @@ nibble_set_bits[10] = 2
 
 All call return sum = 3+2 = 5 which are total set bits in 1010 1110  
 
+</br>
 
 #### Swap two numbers without using extra variable
 ```C++
@@ -92,7 +95,7 @@ x = x ^ y = 0111 ^ 0011 = 0100
 x = 0100 = 4  
 y = 0011 = 3  
 
-
+</br>
 
 #### Check if number is power of 2
 ```C++
@@ -118,7 +121,7 @@ num = 0110
 num & (num - 1) &nbsp; => &nbsp; (0110 & 0101) &nbsp; => &nbsp; 0100  
 (num && !(num & (num - 1))) &nbsp; => &nbsp; **False** &nbsp; => Is not power of 2  
 
-
+</br>
 
 #### Convert uppercase character to lowercase
 ```C++
@@ -131,10 +134,10 @@ char * upper_to_lower(char *str)
 } 
 ```
 
-We OR the character with ' ' which is ASCII 32 since lowercase characters ASCII value is 32 more than uppercase  
+We OR the character with ' ', which is ASCII 32, since lowercase characters ASCII value is 32 more than uppercase  
 
 'A' &nbsp; => &nbsp; (65)<sub>d</sub> &nbsp; => &nbsp; (0100 0001)<sub>b</sub>  
-' ' &nbsp; => &nbsp; (32)<sub>d</sub> &nbsp; => &nbsp; (0010 0000)<sub>b</sub>  
+'  ' &nbsp; => &nbsp; (32)<sub>d</sub> &nbsp; => &nbsp; (0010 0000)<sub>b</sub>  
 
 0100 0001  
 0010 0000 &nbsp; OR  
@@ -142,10 +145,10 @@ We OR the character with ' ' which is ASCII 32 since lowercase characters ASCII 
 0110 0001  
 
 
-(0100 0001)<sub>b</sub> &nbsp; => &nbsp; (97)<sub>d</sub> &nbsp; => &nbsp; 'a'  
+(0110 0001)<sub>b</sub> &nbsp; => &nbsp; (97)<sub>d</sub> &nbsp; => &nbsp; 'a'  
 
 
-
+</br>
 
 ## Nth bit operations
 #### Set Nth bit in number
@@ -165,6 +168,7 @@ OR &nbsp; 00**1**00
 &nbsp; &nbsp; &nbsp; ............  
 &nbsp; &nbsp; &nbsp; 10**1**00  
 
+</br>
 
 #### Clear Nth bit in number
 ```C++
@@ -183,6 +187,7 @@ pos = 2
 ............  
 10**0**00 
 
+</br>
 
 #### Toggle Nth bit in number
 ```C++
@@ -201,6 +206,7 @@ pos = 2
 ............  
 10**0**00  
 
+</br>
 
 #### Check Nth bit in number Set or Unset
 ```C++
@@ -219,7 +225,7 @@ pos = 2
 ............  
 00**1**00  
 
-
+</br>
 
 #### Clear All bits from LSB till Nth bit in number
 ```C++
@@ -241,7 +247,7 @@ mask = 1111 1000
 ........................  
 0011 1000  
 
-
+</br>
 
 #### Clear All bits from MSB till Nth bit in number
 ```C++
@@ -263,6 +269,7 @@ mask = 0011 1111
 ........................  
 0011 1000  
 
+</br>
 
 ## Bit manipulations
 #### Rotate left by N bits
@@ -286,6 +293,7 @@ INT_BITS = 8
 ........................  
 0000 1001  
 
+</br>
 
 #### Rotate left by N bits
 ```C++
