@@ -9,6 +9,7 @@ Bit manipulation codes & hacks with C++
   * [Count Set bits in number](#Count-Set-bits-in-number)
   * [Swap two numbers without using extra variable](#Swap-two-numbers-without-using-extra-variable)
   * [Check if number is power of 2](#Check-if-number-is-power-of-2)
+  * [Convert uppercase character to lowercase](#Convert-uppercase-character-to-lowercase)
 
 - [Nth bit operations](#Nth-bit-operations)
   * [Set Nth bit in number](#Set-Nth-bit-in-number)
@@ -116,6 +117,34 @@ num = 0110
 (num - 1) &nbsp; => &nbsp; (0110 - 0001) &nbsp; => &nbsp; 0101  
 num & (num - 1) &nbsp; => &nbsp; (0110 & 0101) &nbsp; => &nbsp; 0100  
 (num && !(num & (num - 1))) &nbsp; => &nbsp; **False** &nbsp; => Is not power of 2  
+
+
+
+#### Convert uppercase character to lowercase
+```C++
+char * upper_to_lower(char *str) 
+{ 
+    for(int i=0; str[i]!='\0'; i++) 
+        str[i] = str[i] | ' '; 
+  
+    return str; 
+} 
+```
+
+We OR the character with ' ' which is ASCII 32 since lowercase characters ASCII value is 32 more than uppercase  
+
+'A' &nbsp; => &nbsp; (65)<sub>d</sub> &nbsp; => &nbsp; (0100 0001)<sub>b</sub>  
+' ' &nbsp; => &nbsp; (32)<sub>d</sub> &nbsp; => &nbsp; (0010 0000)<sub>b</sub>  
+
+0100 0001  
+0010 0000 &nbsp; OR  
+........................  
+0110 0001  
+
+
+(0100 0001)<sub>b</sub> &nbsp; => &nbsp; (97)<sub>d</sub> &nbsp; => &nbsp; 'a'  
+
+
 
 
 ## Nth bit operations
