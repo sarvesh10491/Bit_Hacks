@@ -10,6 +10,7 @@ Bit manipulation codes & hacks with C++
   * [Swap two numbers without using extra variable](#Swap-two-numbers-without-using-extra-variable)
   * [Check if number is power of 2](#Check-if-number-is-power-of-2)
   * [Convert uppercase character to lowercase](#Convert-uppercase-character-to-lowercase)
+  * [Convert lowercase character to uppercase](#Convert-lowercase-character-to-uppercase)
 
 - [Nth bit operations](#Nth-bit-operations)
   * [Set Nth bit in number](#Set-Nth-bit-in-number)
@@ -134,10 +135,10 @@ char * upper_to_lower(char *str)
 } 
 ```
 
-We OR the character with ' ', which is ASCII 32, since lowercase characters ASCII value is 32 more than uppercase  
+We OR the character with ' ', which is ASCII 32, since lowercase characters ASCII value is 32 more than uppercase.  
 
 'A' &nbsp; => &nbsp; (65)<sub>d</sub> &nbsp; => &nbsp; (0100 0001)<sub>b</sub>  
-'  ' &nbsp; => &nbsp; (32)<sub>d</sub> &nbsp; => &nbsp; (0010 0000)<sub>b</sub>  
+' ' &nbsp; => &nbsp; (32)<sub>d</sub> &nbsp; => &nbsp; (0010 0000)<sub>b</sub>  
 
 0100 0001  
 0010 0000 &nbsp; OR  
@@ -147,6 +148,32 @@ We OR the character with ' ', which is ASCII 32, since lowercase characters ASCI
 
 (0110 0001)<sub>b</sub> &nbsp; => &nbsp; (97)<sub>d</sub> &nbsp; => &nbsp; 'a'  
 
+
+</br>
+
+#### Convert lowercase character to uppercase
+```C++
+char * lower_to_upper(char *str) 
+{ 
+    for(int i=0; str[i]!='\0'; i++) 
+        str[i] = str[i] & ~' '; 
+  
+    return str; 
+} 
+```
+
+We AND the character with ~' ', which is negation of ASCII 32, since uppercase characters ASCII value is 32 less than lowercase.  
+
+'a' &nbsp; => &nbsp; (97)<sub>d</sub> &nbsp; => &nbsp; (0110 0001)<sub>b</sub>  
+~' ' &nbsp; => &nbsp; ~(32)<sub>d</sub> &nbsp; => &nbsp; ~(0010 0000)<sub>b</sub> &nbsp; => &nbsp; (1101 1111)<sub>b</sub>  
+
+0110 0001  
+1101 1111 &nbsp; AND  
+........................  
+0100 0001  
+
+
+(0100 0001)<sub>b</sub> &nbsp; => &nbsp; (65)<sub>d</sub> &nbsp; => &nbsp; 'A'  
 
 </br>
 
