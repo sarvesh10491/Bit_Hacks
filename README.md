@@ -11,6 +11,7 @@ Bit manipulation codes & hacks with C++
   * [Check if number is power of 2](#Check-if-number-is-power-of-2)
   * [Convert uppercase character to lowercase](#Convert-uppercase-character-to-lowercase)
   * [Convert lowercase character to uppercase](#Convert-lowercase-character-to-uppercase)
+  * [Invert character case in string](#Invert-character-case-in-string)
 
 - [Nth bit operations](#Nth-bit-operations)
   * [Set Nth bit in number](#Set-Nth-bit-in-number)
@@ -176,6 +177,27 @@ We AND the character with ~' ', which is negation of ASCII 32, since uppercase c
 (0100 0001)<sub>b</sub> &nbsp; => &nbsp; (65)<sub>d</sub> &nbsp; => &nbsp; 'A'  
 
 </br>
+
+
+
+#### Invert character case in string
+```C++
+char * invert_case(char *str) 
+{ 
+    for(int i=0; str[i]!='\0'; i++)
+    {
+        if(str[i]>=65 && str[i]<=90)
+            str[i] = str[i] | ' ';
+        else if(str[i]>=97 && str[i]<=122)
+            str[i] = str[i] & ~' ';
+    }
+  
+    return str; 
+}
+```
+
+</br>
+
 
 ## Nth bit operations
 #### Set Nth bit in number
